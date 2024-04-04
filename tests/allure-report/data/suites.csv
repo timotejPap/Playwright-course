@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun Mar 24 16:59:39 CET 2024","Sun Mar 24 16:59:44 CET 2024","5606","","login.spec.ts","Login","","","Invalid login - valid username, invalid password @slow",""
+"passed","Sun Mar 24 16:59:47 CET 2024","Sun Mar 24 16:59:48 CET 2024","568","","login.spec.ts","Login","","","Cannot login with locked out user",""
+"passed","Sun Mar 24 16:59:37 CET 2024","Sun Mar 24 16:59:39 CET 2024","1862","","login.spec.ts","Login","","","Succesfull login",""
+"passed","Sun Mar 24 16:59:47 CET 2024","Sun Mar 24 16:59:47 CET 2024","465","","login.spec.ts","Login","","","Invalid login - empty username, empty password",""
+"passed","Mon Mar 25 21:03:34 CET 2024","Mon Mar 25 21:03:42 CET 2024","8419","","tab.spec.ts","Tabs","","","Simple alert",""
+"passed","Sun Mar 24 16:59:45 CET 2024","Sun Mar 24 16:59:47 CET 2024","1422","","login.spec.ts","Login","","","Invalid login - invalid username, valid password",""
