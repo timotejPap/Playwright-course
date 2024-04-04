@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "allTests": "playwright test",
+    "prodTests": "ENV=prod playwright test",
+    "localTests": "ENV=local playwright test",
+    "test:api": "playwright test --config=api.config.ts --project=chromium --grep=@api"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,6 +19,7 @@
     "allure-playwright": "^2.15.0"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "playwright-slack-report": "^1.1.72"
   }
 }
