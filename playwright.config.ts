@@ -1,10 +1,4 @@
 import { defineConfig, devices } from '@playwright/test';
-import { channel } from 'diagnostics_channel';
-import dotenv from "dotenv";
-
-// dotenv.config({
-//   path: `./env/.env.${process.env.ENV}`
-// });
 
 /**
  * Read environment variables from file.
@@ -45,7 +39,6 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-  { name: "setup", testMatch: /.*\.setup\.ts/, fullyParallel: false},
     {
       name: 'chromium',
       // dependencies: ["setup"],
