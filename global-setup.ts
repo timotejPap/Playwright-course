@@ -11,7 +11,7 @@ async function globalSetup () {
     //check logged in
     await page.waitForURL("https://demoqa.com/profile");
 
-    await page.context().storageState({ path: "./loginAuth.json"});
+    await page.context().storageState({ path: "loginAuth.json"});
     await browser.close();
 }
 
