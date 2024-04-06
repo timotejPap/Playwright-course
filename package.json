@@ -19,6 +19,9 @@
     "allure-playwright": "^2.15.0"
   },
   "dependencies": {
+    "artillery": "^2.0.9",
+    "artillery-engine-playwright": "^1.6.0",
+    "axe-playwright": "^2.0.1",
     "dotenv": "^16.4.5",
     "playwright-slack-report": "^1.1.72"
   }

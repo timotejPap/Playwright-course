@@ -2,9 +2,9 @@ import { defineConfig, devices } from '@playwright/test';
 import { channel } from 'diagnostics_channel';
 import dotenv from "dotenv";
 
-dotenv.config({
-  path: `./env/.env.${process.env.ENV}`
-});
+// dotenv.config({
+//   path: `./env/.env.${process.env.ENV}`
+// });
 
 /**
  * Read environment variables from file.
@@ -16,11 +16,11 @@ dotenv.config({
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  // globalSetup: require.resolve("./global-setup.ts"),
+  globalSetup: require.resolve("./global-setup.ts"),
   testDir: './tests',
-  timeout: 15000,
+  timeout: 30 * 1000,
  expect: {
-  timeout: 15000,
+  timeout: 10000,
  },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -31,18 +31,11 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ["D:\IT learning\Playwright\Projects\node_modules\playwright-slack-report\dist\src\SlackReporter.js",
-      {
-        channels: ["playwright-tests"],
-        sendResults: "always",
-      }
-    ]
-    ['line'],
-  ],
+  reporter:'html',
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    // storageState: "loginauth.json",
+    storageState: "loginAuth.json",
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
