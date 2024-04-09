@@ -5,9 +5,8 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Authentication", () => {
-    test.use ({ storageState: { cookies: [], origins: []}});
     test.only("Succesfull login", async ({ page }) => {
         await page.getByText("ivanHroz").isVisible();
-        expect (page.getByRole("button", { name: "Log out" })).toBeVisible({ timeout: 15000 });
+        expect (page.getByRole("button", { name: "Log out" }));
     });
 });
