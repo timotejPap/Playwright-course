@@ -10,7 +10,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  globalSetup: require.resolve("./global-setup.ts"),
+  // globalSetup: require.resolve("./global-setup.ts"),
   testDir: './tests',
   timeout: 30 * 1000,
  expect: {
@@ -29,7 +29,7 @@ export default defineConfig({
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    storageState: "loginAuth.json",
+    // storageState: "loginAuth.json",
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
@@ -39,8 +39,10 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    { name: "setup", testMatch: /.*\.setup\.ts/, fullyParallel: false },
     {
       name: 'chromium',
+      dependencies: ["setup"],
       // dependencies: ["setup"],
       use: { ...devices['Desktop Chrome'] },
     },

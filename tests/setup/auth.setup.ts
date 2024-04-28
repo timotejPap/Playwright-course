@@ -1,10 +1,10 @@
 import { test as setup } from "@playwright/test";
 
 let adminUsername = "Admin123";
-let adminPassword = "Admin123*";
+let adminPassword = "peterAdmin123*";
 const adminAuthFile = ".auth/admin.json";
 
-let userName = "ivanHroz";
+let userName = "peterPan";
 let userPassword = "aHoJ-*987*";
 const userAuthFile = ".auth/user.json";
 

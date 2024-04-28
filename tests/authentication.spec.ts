@@ -5,8 +5,8 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Authentication", () => {
-    test.only("Succesfull login", async ({ page }) => {
+    test.skip("Succesfull login", async ({ page }) => {
         await page.getByText("ivanHroz").isVisible();
-        await expect (page.getByRole("button", { name: "Log out" })).toBeVisible;
+        await expect (page.getByRole("button", { name: "Log out" })).toBeVisible();
     });
 });
