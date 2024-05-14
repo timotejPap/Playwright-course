@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 import dotenv from "dotenv";
 
 dotenv.config ({
-  path: 
+  path: `./env/.env.${process.env.ENV}`
 });
 
 /**
@@ -47,8 +47,7 @@ export default defineConfig({
     { name: "setup", testMatch: /.*\.setup\.ts/, fullyParallel: false },
     {
       name: 'chromium',
-      dependencies: ["setup"],
-      // dependencies: ["setup"],
+      //dependencies: ["setup"],
       use: { ...devices['Desktop Chrome'] },
     },
 
