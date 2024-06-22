@@ -14,7 +14,7 @@ test('has title', async ({ page }) => {
 test.use({baseURL: "https://www.saucedemo.com/v1/"});
 test('get started link', async ({ page }) => {
   await page.goto('/');
-  await page.locator("//input[@data-test=username]");
+  page.locator("//input[@data-test=username]");
 
   // Click the get started link.
   await page.getByRole('link', { name: 'Swag labs' }).click();
